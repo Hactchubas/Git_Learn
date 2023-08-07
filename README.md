@@ -1,7 +1,15 @@
 # Git-Learn
-## repository in wich I tested Git commands
+## Repository in wich I tested Git commands
 
-After configuring the conection between Git and Github with the SSH Key, and creating this :
+Checking the git version: ```git --version```.
+Creating a git repository in the current directory: ```git init```.
 
 Clone the repository to current directory: ```git clone <repository link>```.
 
+Check tracked files: ```git status```.
+Adding file to tracked files: ```git add <file>```, or to add all files: ```git add .```.
+Removing file of tracked flies: ```git rm --cached <file>```, or to remove all files: ```git rm --cached -r .```.
+
+Commiting changes: ```git commit -m "<Message>"```
+Checking the differences between modified (not staged) files and commited changes: ```git diff```. 
+Checking the differences between modified (staged) files and commited changes: ```git diff <--cached or --staged>```.
