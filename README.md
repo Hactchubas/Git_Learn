@@ -25,4 +25,6 @@ Add file to commit: ```git add <file>``` then ```git commit --amend --no-edit```
 
 Go to commited version: ```git checkout <commit code>```.
 Undo code above: ```git switch -```.
-go back to newest version (master/main): ```git checkout <master or main>```
+Go back to newest version (master/main): ```git checkout <master or main>```.
+Restore file to lest commited version: ```git checkout <file>``` or to retore all files ```git checkout .```.
+Remove untracked files: ```git clean -f```
