@@ -15,6 +15,10 @@ Checking the differences between modified (not staged) files and commited change
 Checking the differences between modified (staged) files and commited changes: ```git diff <--cached or --staged>```.
 
 See commits history: ```git log```.
+See simplified history: ```git log --oneline```.
 See commit update patch: ```git log --patch``` or ```git log -p```.
 See files changes: ```git log --stat```.
 See short version of changed files: ```git log --shortstat```.
+
+Change commit message: ```git commit --amend -m "<New message>"```.
+Add file to commit: ```git add <file>``` then ```git commit --amend --no-edit```.
