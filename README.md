@@ -13,3 +13,8 @@ Removing file of tracked flies: ```git rm --cached <file>```, or to remove all f
 Commiting changes: ```git commit -m "<Message>"```
 Checking the differences between modified (not staged) files and commited changes: ```git diff```. 
 Checking the differences between modified (staged) files and commited changes: ```git diff <--cached or --staged>```.
+
+See commits history: ```git log```.
+See commit update patch: ```git log --patch``` or ```git log -p```.
+See files changes: ```git log --stat```.
+See short version of changed files: ```git log --shortstat```.
