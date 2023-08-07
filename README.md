@@ -22,3 +22,7 @@ See short version of changed files: ```git log --shortstat```.
 
 Change commit message: ```git commit --amend -m "<New message>"```.
 Add file to commit: ```git add <file>``` then ```git commit --amend --no-edit```.
+
+Go to commited version: ```git checkout <commit code>```.
+Undo code above: ```git switch -```.
+go back to newest version (master/main): ```git checkout <master or main>```
