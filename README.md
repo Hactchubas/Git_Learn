@@ -9,6 +9,7 @@ Clone the repository to current directory: ```git clone <repository link>```.
 Check tracked files: ```git status```.
 Adding file to tracked files: ```git add <file>```, or to add all files: ```git add .```.
 Removing file of tracked flies: ```git rm --cached <file>```, or to remove all files: ```git rm --cached -r .```.
+Removing flie of tracked files (if a commit has been made): ```git restore --staged <file>```.
 
 Commiting changes: ```git commit -m "<Message>"```
 Checking the differences between modified (not staged) files and commited changes: ```git diff```. 
@@ -27,4 +28,7 @@ Go to commited version: ```git checkout <commit code>```.
 Undo code above: ```git switch -```.
 Go back to newest version (master/main): ```git checkout <master or main>```.
 Restore file to lest commited version: ```git checkout <file>``` or to retore all files ```git checkout .```.
-Remove untracked files: ```git clean -f```
+Remove untracked files: ```git clean -f```.
+Restore all tracked and unstaged changes to last commit: ```git reset --hard```.
+
+Create ".gitignore" file (on Git Bash): ```touch .gitignore```.
