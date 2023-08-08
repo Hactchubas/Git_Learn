@@ -1,12 +1,10 @@
 # Git-Learn
-## Repository in wich I tested Git commands
+
 
 ## Starting.
 Checking the git version: ```git --version```.
 
 Creating a git repository in the current directory: ```git init```.
-
-
 
 
 ## Setting up repository.
@@ -21,8 +19,6 @@ Change remote connection adress: ```git remote set-url <repository: origin> <lin
 Pull informations from server to machine: ```git pull```.
 
 
-
-
 ## Managing status.
 Check tracked files: ```git status```.
 
@@ -35,8 +31,6 @@ Removing flie of tracked files (if a commit has been made): ```git restore --sta
 Make file not watchable: ```git update-index --skip-worktree <file>```.
 
 Undo command above: ```git update-index --no-skip-worktree <file>```.
-
-
 
 
 ## Managing commmits .
@@ -59,16 +53,12 @@ Remove commit, but keep changes as modified: ```git reset --mixed HEAD~<number o
 Remove commit, but keep changes as added: ```git reset --soft HEAD~<number of commits>```.
 
 
-
-
 ## Pushing changes
 Push changes to remote server: ```git push```.
 
 (CAUTION) Forcing push changes to remote server: ```got push --force```, for when your local repository don't match the remote one, but you're sure the local repository is correct.
 
 Forcing push changes to remote server, if no changes would be lost: ```git push --force-with-lease```.  
-
-
 
  
 ## Changes history.
@@ -81,8 +71,6 @@ See commit update patch: ```git log --patch``` or ```git log -p```.
 See files changes: ```git log --stat```.
 
 See short version of changed files: ```git log --shortstat```.
-
-
 
 
 ## Managing versions.
@@ -99,12 +87,8 @@ Remove untracked files: ```git clean -f```.
 Restore all tracked and unstaged changes to last commit: ```git reset --hard```.
 
 
-
-
 ## .gitignore.
 Create ".gitignore" file (on Git Bash): ```touch .gitignore```.
-
-
 
 
 ## Managing branches.
@@ -135,8 +119,6 @@ See branch commit history: ```git log <branch name> log```.
 Fecthing remote branch to local repository: ```git fetch <repository: origin> <branch name>```.
 
 
-
-
 ## Managing merges.
 Merge current branch with other branch changes: ```git merge <name of branch with the changes>```.
 
@@ -145,8 +127,6 @@ List of merged branches: ```git branch --merged```.
 List of not merged branches: ```git branch --no-merged```.
 
 Abort merge: ```git merge --abort``` or ```git reset --hard```.
-
-
 
 
 ## Managing Tags
@@ -169,8 +149,6 @@ Remove local tag: ```git tag -d <tag name>```.
 Remove remote tag: ```git push --delete <repository: origin> <tag name>```.
 
 
-
-
 ## Stash
 Create stash: ```git stash```.
 
@@ -187,8 +165,6 @@ Applying and removing stash at the same time: ```git stash pop``` or ```git stas
 Create new branch and apply stash to it: ```git stash branch <branch name>```, or ```git stash branch <branch name> @stash{<stash number>}``` for specific stash.
 
 
-
-
 ## Rebase
 Rebase branch: ```git rebase <branch name>``` to bring <branch name> changes to current branch.
 
@@ -201,8 +177,6 @@ Pull with rebase: ```git pull --rebase```.
 Squashing through rebase: ```git rebase --interactive```, then change the commits added to "squash" and rename the commit as intended.
 
 
-
-
 ## Cherry-pick
 Pick specific commit from other branch and apply to current branch: ```git cherry-pick <commit code>```.
 
@@ -212,3 +186,15 @@ Pick specific commit from other branch and apply to current branch: ```git cherr
 - Determine good commit: ```git bisect good <commit code>```.
 - Determine bad commit: ```git bisect bad <commit code>```.
 - End bisect: ```git bisect reset```.
+
+## Fetch
+Pull changes from remote repository without automatic merging: ```git fecth```.
+
+## Alias
+Configuring alias for git commands: ```git config --global alias.< alias command> '<command>' ```, the '' are nedded for commands with hifens or empty spaces between.
+
+Removing alias: ```git config --global --unset alias.<saved alias command>```
+
+
+## Grep (Git bash/Linux)
+Search by related name (examples): ```git branch | grep <related name>```, ```git log --oneline | grep commit```
