@@ -43,3 +43,12 @@ See branchs: ```git branch```.
 Create branch: ```git branch <name>```.
 Change branch: ```git checkout <name>```.
 Create and change branch: ```git checkout -b <name>```.
+Create and switch to new brand with detached HEAD: ```git switch -c <branch name>```.
+Send branch to remote repository: ```git push --set-upstream origin <branch name>```.
+Removing local branch: ```git branch -d <branch name>```.
+Removing remote branch: ```git push --delete origin <branch name>```.
+Reanming checkedout branch: ```git branch -m <new name>```.
+Renaming branch: ```git branch -m <current name> <new name>```.
+See branch commit history: ```git log <branch name> log```.
+
+Merge current branch with other branch changes: ```git merge <name of branch with the changes>```.
