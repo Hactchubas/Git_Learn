@@ -1,7 +1,7 @@
 # Git-Learn
 ## Repository in wich I tested Git commands
 
-### Starting.
+## Starting.
 Checking the git version: ```git --version```.
 
 Creating a git repository in the current directory: ```git init```.
@@ -9,7 +9,7 @@ Creating a git repository in the current directory: ```git init```.
 
 
 
-### Setting up repository.
+## Setting up repository.
 Clone the repository to current directory: ```git clone <repository link>```.
 
 Checking remote connection: ```git remote -v```.
@@ -23,7 +23,7 @@ Pull informations from server to machine: ```git pull```.
 
 
 
-### Managing status.
+## Managing status.
 Check tracked files: ```git status```.
 
 Adding file to tracked files: ```git add <file>```, or to add all files: ```git add .```.
@@ -39,7 +39,7 @@ Undo command above: ```git update-index --no-skip-worktree <file>```.
 
 
 
-### Managing commmits .
+## Managing commmits .
 Commiting changes: ```git commit -m "<Message>"```.
 
 Checking the differences between modified (not staged) files and commited changes: ```git diff```. 
@@ -61,7 +61,7 @@ Remove commit, but keep changes as added: ```git reset --soft HEAD~<number of co
 
 
 
-### Pushing changes
+## Pushing changes
 Push changes to remote server: ```git push```.
 
 (CAUTION) Forcing push changes to remote server: ```got push --force```, for when your local repository don't match the remote one, but you're sure the local repository is correct.
@@ -71,7 +71,7 @@ Forcing push changes to remote server, if no changes would be lost: ```git push 
 
 
  
-### Changes history.
+## Changes history.
 See commits history: ```git log```.
 
 See simplified history: ```git log --oneline```.
@@ -85,7 +85,7 @@ See short version of changed files: ```git log --shortstat```.
 
 
 
-### Managing versions.
+## Managing versions.
 Go to commited version: ```git checkout <commit code>```.
 
 Undo code above: ```git switch -```.
@@ -101,13 +101,13 @@ Restore all tracked and unstaged changes to last commit: ```git reset --hard```.
 
 
 
-### .gitignore.
+## .gitignore.
 Create ".gitignore" file (on Git Bash): ```touch .gitignore```.
 
 
 
 
-### Managing branches.
+## Managing branches.
 See branchs: ```git branch```.
 
 see local and remote branchs: ```git branch -a```.
@@ -137,7 +137,7 @@ Fecthing remote branch to local repository: ```git fetch <repository: origin> <b
 
 
 
-### Managing merges.
+## Managing merges.
 Merge current branch with other branch changes: ```git merge <name of branch with the changes>```.
 
 List of merged branches: ```git branch --merged```.
@@ -149,7 +149,7 @@ Abort merge: ```git merge --abort``` or ```git reset --hard```.
 
 
 
-### Managing Tags
+## Managing Tags
 Create tag: ```git tag <tag name>``` or ```git tag <tag name> <commmit code>``` to tag especified commit.
 
 Create annotaded tag: ```git tag -a -m "<massage> <tag name>```.
@@ -171,7 +171,7 @@ Remove remote tag: ```git push --delete <repository: origin> <tag name>```.
 
 
 
-### Stash
+## Stash
 Create stash: ```git stash```.
 
 List all stashs: ```git stash list```.
@@ -189,7 +189,7 @@ Create new branch and apply stash to it: ```git stash branch <branch name>```, o
 
 
 
-### Rebase
+## Rebase
 Rebase branch: ```git rebase <branch name>``` to bring <branch name> changes to current branch.
 
 Abort rebase: ```git rebase --abort```. 
@@ -203,11 +203,11 @@ Squashing through rebase: ```git rebase --interactive```, then change the commit
 
 
 
-### Cherry-pick
+## Cherry-pick
 Pick specific commit from other branch and apply to current branch: ```git cherry-pick <commit code>```.
 
 
-### Bisect
+## Bisect
 - Start binary seach through commits: ```git bisect start```.
 - Determine good commit: ```git bisect good <commit code>```.
 - Determine bad commit: ```git bisect bad <commit code>```.
