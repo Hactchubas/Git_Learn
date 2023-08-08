@@ -39,7 +39,7 @@ Undo command above: ```git update-index --no-skip-worktree <file>```.
 
 
 
-### Commmiting.
+### Managing commmits.
 Commiting changes: ```git commit -m "<Message>"```.
 
 Checking the differences between modified (not staged) files and commited changes: ```git diff```. 
@@ -52,8 +52,11 @@ Add file to commit: ```git add <file>``` then ```git commit --amend --no-edit```
 
 Revert commit: ```git revert HEAD```, or ```git revert <commit code```.
 
-Remove commit: ```git reser --hard HEAD~<number of commits>```.
+Remove commit: ```git reset --hard HEAD~<number of commits>```.
 
+Remove commit, but keep changes as modified: ```git reset --mixed HEAD~<number of commits>```.
+
+Remove commit, but keep changes as added: ```git reset --soft HEAD~<number of commits>```.
 
 
 
