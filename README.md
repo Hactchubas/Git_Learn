@@ -5,11 +5,17 @@ Checking the git version: ```git --version```.
 Creating a git repository in the current directory: ```git init```.
 
 Clone the repository to current directory: ```git clone <repository link>```.
+Checking remote connection: ```git remote -v```.
+Adding remote connection: ```git remote add <repository: origin> <link>```.
+Change remote connection adress: ```git remote set-url <repository: origin> <link>```.
+Pull informations from server to machine: ```git pull```.
 
 Check tracked files: ```git status```.
 Adding file to tracked files: ```git add <file>```, or to add all files: ```git add .```.
 Removing file of tracked flies: ```git rm --cached <file>```, or to remove all files: ```git rm --cached -r .```.
 Removing flie of tracked files (if a commit has been made): ```git restore --staged <file>```.
+Make file not watchable: ```git update-index --skip-worktree <file>```.
+Undo command above: ```git update-index --no-skip-worktree <file>```
 
 Commiting changes: ```git commit -m "<Message>"```
 Checking the differences between modified (not staged) files and commited changes: ```git diff```. 
@@ -32,3 +38,8 @@ Remove untracked files: ```git clean -f```.
 Restore all tracked and unstaged changes to last commit: ```git reset --hard```.
 
 Create ".gitignore" file (on Git Bash): ```touch .gitignore```.
+
+See branchs: ```git branch```.
+Create branch: ```git branch <name>```.
+Change branch: ```git checkout <name>```.
+Create and change branch: ```git checkout -b <name>```.
