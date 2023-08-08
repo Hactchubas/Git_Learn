@@ -39,7 +39,7 @@ Undo command above: ```git update-index --no-skip-worktree <file>```.
 
 
 
-### Managing commmits.
+### Managing commmits .
 Commiting changes: ```git commit -m "<Message>"```.
 
 Checking the differences between modified (not staged) files and commited changes: ```git diff```. 
@@ -60,6 +60,17 @@ Remove commit, but keep changes as added: ```git reset --soft HEAD~<number of co
 
 
 
+
+### Pushing changes
+Push changes to remote server: ```git push```.
+
+(CAUTION) Forcing push changes to remote server: ```got push --force```, for when your local repository don't match the remote one, but you're sure the local repository is correct.
+
+Forcing push changes to remote server, if no changes would be lost: ```git push --force-with-lease```.  
+
+
+
+ 
 ### Changes history.
 See commits history: ```git log```.
 
@@ -99,6 +110,8 @@ Create ".gitignore" file (on Git Bash): ```touch .gitignore```.
 ### Managing branches.
 See branchs: ```git branch```.
 
+see local and remote branchs: ```git branch -a```.
+
 Create branch: ```git branch <name>```.
 
 Change branch: ```git checkout <name>```.
@@ -118,6 +131,8 @@ Reanming checkedout branch: ```git branch -m <new name>```.
 Renaming branch: ```git branch -m <current name> <new name>```.
 
 See branch commit history: ```git log <branch name> log```.
+
+Fecthing remote branch to local repository: ```git fetch <repository: origin> <branch name>```.
 
 
 
@@ -171,3 +186,29 @@ Applying and removing stash at the same time: ```git stash pop``` or ```git stas
 
 Create new branch and apply stash to it: ```git stash branch <branch name>```, or ```git stash branch <branch name> @stash{<stash number>}``` for specific stash.
 
+
+
+
+### Rebase
+Rebase branch: ```git rebase <branch name>``` to bring <branch name> changes to current branch.
+
+Abort rebase: ```git rebase --abort```. 
+
+Continue rebase after resolving merge problems: ```git rebase --continue```.
+
+Pull with rebase: ```git pull --rebase```. 
+
+Squashing through rebase: ```git rebase --interactive```, then change the commits added to "squash" and rename the commit as intended.
+
+
+
+
+### Cherry-pick
+Pick specific commit from other branch and apply to current branch: ```git cherry-pick <commit code>```.
+
+
+### Bisect
+- Start binary seach through commits: ```git bisect start```.
+- Determine good commit: ```git bisect good <commit code>```.
+- Determine bad commit: ```git bisect bad <commit code>```.
+- End bisect: ```git bisect reset```.
